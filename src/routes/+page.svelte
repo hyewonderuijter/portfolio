@@ -1,10 +1,15 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<!-- src/routes/+page.svelte-->
+<script>
+	import { page } from "$app/state";
+    import Hero from '$lib/components/Hero.svelte'
+</script>
 
+<main>
+    <Hero />
+</main>
 
 <style>
     * {
-        max-width: 80vw;
-        
+        overflow-x: hidden;
     }
 </style>

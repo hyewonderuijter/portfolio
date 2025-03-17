@@ -8,6 +8,6 @@
         padding: 5rem 0;
         color: #fff;
         font-size: .7rem;
-        background-color: black;
+        background-color: #000;
     }
 </style>

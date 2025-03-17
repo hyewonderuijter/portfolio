@@ -1,3 +1,4 @@
+<!--src/lib/components/Header.svelte-->
 <script>
     import { page } from '$app/stores';
 
@@ -7,42 +8,51 @@
         isMenuOpen = !isMenuOpen; // Menu Toggle
     }
 </script>
+
 <header>
-    
-    <img src="/portfolio-logo.png" alt="logo of portfolio website" class="logo-img">
-    <button 
-        class="menu-icon" 
-        on:click={toggleMenu} 
-        aria-expanded={isMenuOpen} 
-        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-    >
-        {#if isMenuOpen}
-        <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/delete-sign.png" alt="delete-sign" class="menu-close-icon">
-        {:else}
-        <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/menu--v1.png" alt="menu--v3"class="menu-open-icon">
-        {/if}
-    </button>
+    <div class="container">
+        <img src="/portfolio-logo.png" alt="logo of portfolio website" class="logo-img">
+        <button 
+            class="menu-overlay-bg {isMenuOpen ? 'visible' : ''}" 
+            on:click={toggleMenu} 
+            on:keydown={(e) => e.key === 'Enter' && toggleMenu()} 
+            aria-label="Close menu overlay"
+        ></button>
+        <button 
+            class="menu-icon" 
+            on:click={toggleMenu} 
+            aria-expanded={isMenuOpen} 
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        >
+            {#if isMenuOpen}
+            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/delete-sign.png" alt="delete-sign" class="menu-close-icon">
+            {:else}
+            <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/menu--v1.png" alt="menu--v3"class="menu-open-icon">
+            {/if}
+        </button>
 
-    <button 
-        class="overlay {isMenuOpen ? 'open' : ''}" 
-        on:click={toggleMenu} 
-        aria-expanded={isMenuOpen} 
-        aria-label="Toggle menu"
-    >
-        <a href="/">Home</a>
-        <a href="/work" class:active={$page.url.pathname === '/work'}>Work</a>
-        <a href="/contact" class:active={$page.url.pathname === '/contact'}>Contact</a>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/hyewonim"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/linkedin.png" alt="linkedin" class="social-icon-img"/></a>
-            <a href="https://github.com/hyewonderuijter"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" class="social-icon-img"/></a>
-            <a href="mailto:hyewon.im@icloud.com"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/new-post.png" alt="new-post" class="social-icon-img"/></a>
+        <button 
+            class="overlay {isMenuOpen ? 'open' : ''}" 
+            on:click={toggleMenu} 
+            aria-expanded={isMenuOpen} 
+            aria-label="Toggle menu"
+        >
+            <a href="/">Home</a>
+            <a href="/work" class:active={$page.url.pathname === '/work'}>Work</a>
+            <a href="/contact" class:active={$page.url.pathname === '/contact'}>Contact</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/hyewonim"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/linkedin.png" alt="linkedin" class="social-icon-img"/></a>
+                <a href="https://github.com/hyewonderuijter"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" class="social-icon-img"/></a>
+                <a href="mailto:hyewon.im@icloud.com"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/new-post.png" alt="new-post" class="social-icon-img"/></a>
+            </div>
+        </button>
+
+        <div class="big-screen-nav">
+            <a href="/" class:active={$page.url.pathname === '/' || $page.url.pathname === ''}>Home</a>
+            <a href="/work" class:active={$page.url.pathname === '/work'}>Work</a>
+            <a href="/contact" class:active={$page.url.pathname === '/contact'}>Contact</a>
         </div>
-    </button>
-
-    <div class="big-screen-nav">
-        <a href="/">Home</a>
-        <a href="/work" class:active={$page.url.pathname === '/work'}>Work</a>
-        <a href="/contact" class:active={$page.url.pathname === '/contact'}>Contact</a>
+        
     </div>
 </header>
 
@@ -50,18 +60,24 @@
     .logo-img {
         width: 5rem;
         border-radius: 10px;
-        margin-left: 2rem;
     }
 
     header {
+        padding: 2rem 0;
         width: 100vw;
         overflow: hidden;
         overflow-x: none;
+        background-color: #FCF8F6;
+        z-index: 10; /* 다른 요소보다 앞에 배치 */
+    }
+
+    .container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-top: 2rem;
+        max-width: 80vw;
+        margin: 0 auto;
     }
 
     
@@ -77,13 +93,10 @@
         color: #000;
     }
 
-    a:last-child {
-        margin-right: 2rem;
-    }
 
     a {
         text-decoration: none;
-        color: #000;
+        color: #463F3C;
         position: relative;
     }
 
@@ -105,7 +118,7 @@
     }
 
 /* Menu icon is Invisible if the screensize is big enough */
-    .menu-icon, .overlay {
+    .menu-icon, .overlay, .menu-overlay-bg {
         display: none;
     }
 
@@ -115,7 +128,7 @@
     /* ======================== */
     /* ======================== */
 
-    @media (max-width: 1400px) {
+    @media (max-width: 768px) {
             /* Logo Image Size */
                 .logo-img {
                     width: 3.5rem;
@@ -129,12 +142,11 @@
             /* Menu Icon */
                 .menu-icon {
                     display: block;
-                    width: 30px;
-                    margin-right: 1em;
+                    width: 30px;  
                     background: none;
                     border: none;
                     padding: 0;
-                    margin: 0 2rem 0 0;
+
                     cursor: pointer;
                 }
 
@@ -154,7 +166,7 @@
                     display: block;
                     width: 30px;
                     border-bottom: none;
-                    margin-right: 1em;
+                    
                 }
 
                 .menu-close-icon {
@@ -165,8 +177,27 @@
                     z-index: 1001;
                 }
 
+                /* Menu - Overlay Effect */
 
-            /* Menu - Overlay Effect */
+                .menu-overlay-bg {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background: rgba(0, 0, 0, 0.5);
+                    backdrop-filter: blur(10px); /* Blur Effect */
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+                    z-index: 998;
+                }
+
+                .menu-overlay-bg.visible {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
                 .overlay {
                     position: fixed;
                     top: 0;
