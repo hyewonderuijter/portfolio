@@ -90,12 +90,6 @@
 
     a {
         text-decoration: none;
-        color: #000;
-    }
-
-
-    a {
-        text-decoration: none;
         color: #463F3C;
         position: relative;
     }

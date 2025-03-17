@@ -29,10 +29,10 @@
 <style>
     main {
         width: 100vw;
-        height: 80vh;
+        height: 75vh;
         background: url('./bg.svg') no-repeat top / cover; /* SVG 배경 적용 */
         background-repeat: no-repeat;
-        padding: 1rem 0;
+        padding: 2rem 0;
         overflow-y: hidden;
     }
 
@@ -171,7 +171,7 @@
 
     @media (max-width: 684px) {
         main {
-            min-height: 85vh;
+            min-height: 80vh;
         }
 
     .textarea {
