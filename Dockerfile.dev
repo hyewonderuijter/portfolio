@@ -1,0 +1,37 @@
+FROM ubuntu:22.04
+
+# Set Node version and add PNPM and NVM to the PATH
+ENV NODE_VERSION=22.11.0
+ENV NVM_DIR=/root/.nvm
+ENV PNPM_HOME=/root/.local/share/pnpm
+ENV PATH=$PNPM_HOME:$PATH
+ENV PATH=$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+
+# Update Apt packages
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get update
+
+# Install git
+RUN apt-get install -y git
+
+# Install curl
+RUN apt-get install -y curl
+
+# Install and configure starship.
+RUN curl -fsSL https://starship.rs/install.sh | sh -s -- -y && \
+    echo 'eval "$(starship init bash)"' >> /root/.bashrc
+
+# Install the latest version of PNPM and ensure it is in the PATH
+RUN curl -fsSL https://get.pnpm.io/install.sh | bash && \
+    echo "export PNPM_HOME=/root/.local/share/pnpm" >> /etc/profile && \
+    echo "export PATH=\$PNPM_HOME:\$PATH" >> /etc/profile && \
+    export PNPM_HOME=/root/.local/share/pnpm && \
+    export PATH=$PNPM_HOME:$PATH
+
+# Install the latest version of Node.js using nvm
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash && \
+    . $NVM_DIR/nvm.sh && \
+    nvm install ${NODE_VERSION} && \
+    nvm alias default ${NODE_VERSION} && \
+    nvm use default

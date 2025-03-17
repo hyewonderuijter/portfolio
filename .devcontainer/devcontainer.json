@@ -1,0 +1,12 @@
+{
+	"name": "svelte",
+	"service": "svelte",
+	"dockerComposeFile": ["../docker-compose.dev.yml"],
+	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/app",
+	"customizations": {
+		"vscode": {
+			"extensions": ["svelte.svelte-vscode"]
+		}
+	}
+}

@@ -1,0 +1,20 @@
+services:
+  svelte:
+    image: svelte:dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    env_file:
+      - .env
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - .:/app
+    restart: on-failure
+    working_dir: /app
+    healthcheck:
+      test: ['CMD-SHELL', '[ -d /app ]']
+      interval: 1s
+      timeout: 5s
+      retries: 120
+    tty: true
