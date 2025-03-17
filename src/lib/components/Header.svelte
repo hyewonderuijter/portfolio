@@ -115,7 +115,7 @@
     /* ======================== */
     /* ======================== */
 
-    @media (max-width: 768px) {
+    @media (max-width: 1400px) {
             /* Logo Image Size */
                 .logo-img {
                     width: 3.5rem;
