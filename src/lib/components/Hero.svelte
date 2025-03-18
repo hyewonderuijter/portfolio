@@ -29,13 +29,15 @@
 <style>
     main {
         width: 100vw;
-        height: 75vh;
-        background: url('./bg.svg') no-repeat top / cover; /* SVG 배경 적용 */
+        height: 70vh;
+        background: url('./bg.svg') no-repeat top / cover;
         background-repeat: no-repeat;
         padding: 2rem 0;
         overflow-y: hidden;
+        margin-bottom: 0;
     }
 
+    /* Universal Container Setting */
     .container {
         display: flex;
         flex-direction: row;
