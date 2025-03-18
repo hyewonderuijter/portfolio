@@ -37,6 +37,7 @@
 		]
 	},
 	"dependencies": {
-		"@lottiefiles/dotlottie-svelte": "^0.4.8"
+		"@lottiefiles/dotlottie-svelte": "^0.4.8",
+		"aos": "^2.3.4"
 	}
 }

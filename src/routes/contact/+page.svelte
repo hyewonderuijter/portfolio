@@ -4,6 +4,7 @@
 
 <main>
     <div class="container">
+        
         <div class="textarea">
             <h1>Let's Work <br/><span>Together</span></h1>
             <p>I’m always open for a conversation—whether it’s for a potential project, seeking advice, asking questions, or simply networking. My inbox is always open!</p>
@@ -11,15 +12,15 @@
             <!-- Contact Icons -->
             <div class="icon-container">
                 <!-- LinkedIn Icon -->
-                <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="icon linkedin">
+                <a href="https://www.linkedin.com/in/hyewonim" target="_blank" class="icon linkedin">
                     <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="linkedin"/>
                 </a>
                 <!-- Email Icon -->
-                <a href="mailto:your.email@example.com" class="icon email">
+                <a href="mailto:hyewon.im@icloud.com" class="icon email">
                     <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/new-post.png" alt="new-post"/>
                 </a>
                 <!-- Phone Icon -->
-                <a href="tel:+123456789" class="icon phone">
+                <a href="tel:+31657702836" class="icon phone">
                     <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/phone-disconnected.png" alt="phone-disconnected"/>
                 </a>
             </div>

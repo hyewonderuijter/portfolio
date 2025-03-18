@@ -4,6 +4,7 @@
 </script>
 
 <main>
+    
     <div class="container">
         <div class="textarea">
             <h1>Let's connect!</h1>

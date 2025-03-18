@@ -4,120 +4,122 @@
 
 <main>
     <h1>Who am I?</h1>
-    <div class="container">
-        <div class="imgarea">
-            <img src="aboutme.png" alt="profile in the about page" class="about-profile">
-            <svg class="blob-shape" xmlns="http://www.w3.org/2000/svg" width="599" height="540" viewBox="0 0 599 540" fill="none">
-                <path 
-                    d="M589 246.5C547.464 432 468.788 540 320.5 540C172.212 540 0 377.275 0 208C0 38.7247 172.212 0 320.5 0C468.788 0 640.5 16.5 589 246.5Z" 
-                    fill={activeTab === "general" ? "#EEDBD4" : activeTab === "qualification" ? "#BBB2AF" : "#E5C3C2"}
-                />
-            </svg>
-        </div>
-        <div class="textarea">
-            <div class="tablist">
-                <button 
-                    type="button" 
-                    role="tab" 
-                    aria-selected={activeTab === "general"} 
-                    on:click={() => activeTab = "general"} 
-                    class:active={activeTab === "general"}
-                    style="background-color: {activeTab === 'general' ? '#EEDBD4' : 'transparent'}; color: {activeTab === 'general' ? 'white' : '#463F3C'};">
-                    General
-                </button>
-                <button 
-                    type="button" 
-                    role="tab" 
-                    aria-selected={activeTab === "qualification"} 
-                    on:click={() => activeTab = "qualification"} 
-                    class:active={activeTab === "qualification"}
-                    style="background-color: {activeTab === 'qualification' ? '#BBB2AF' : 'transparent'}; color: {activeTab === 'qualification' ? 'white' : '#463F3C'};">
-                    Qualification
-                </button>
-                <button 
-                    type="button" 
-                    role="tab" 
-                    aria-selected={activeTab === "skills"} 
-                    on:click={() => activeTab = "skills"} 
-                    class:active={activeTab === "skills"}
-                    style="background-color: {activeTab === 'skills' ? '#E5C3C2' : 'transparent'}; color: {activeTab === 'skills' ? 'white' : '#463F3C'};">
-                    Skills
-                </button>
+    <div data-aos="fade-up" data-aos-duration="1300">
+        <div class="container">
+            <div class="imgarea">
+                <img src="aboutme.png" alt="profile in the about page" class="about-profile">
+                <svg class="blob-shape" xmlns="http://www.w3.org/2000/svg" width="599" height="540" viewBox="0 0 599 540" fill="none">
+                    <path 
+                        d="M589 246.5C547.464 432 468.788 540 320.5 540C172.212 540 0 377.275 0 208C0 38.7247 172.212 0 320.5 0C468.788 0 640.5 16.5 589 246.5Z" 
+                        fill={activeTab === "general" ? "#EEDBD4" : activeTab === "qualification" ? "#BBB2AF" : "#E5C3C2"}
+                    />
+                </svg>
             </div>
-        
-            <div class="textlist">
-                {#if activeTab === "general"}
-                    <div data-state="active" class="active-general">
-                        <h2>A self-driven learner with a passion for growth</h2>
-                        <p>With a background in Nursing Science, I transitioned into tech after moving to the Netherlands for my relationship. I specialize in UX/UI design and front-end development, and I’m passionate about creating intuitive, user-centered digital experiences.</p>
-                    </div>
-                {:else if activeTab === "qualification"}
-                    <div data-state="active" class="active-qualification">
-                        <h2>My journey is always accompanied by challenges</h2>
-                        <div class="qualification-list">
-                            <div class="education">
-                                <div class="title">
-                                    <img src="education-icon.png" alt="education" class="qualification-icon">
-                                    <h3>Education</h3>
-                                </div>
-                                <div class="education-list">
-                                    <div class="hbo">
-                                        <h4>De Haagse Hogeschool</h4>
-                                        <h5>HBO Prophedeuse Bachelor of User Experience Design</h5>
-                                        <p>2023 / 2024</p>
-                                    </div>
-                                    <div class="bachelor">
-                                        <h4>Dong-Eui University</h4>
-                                        <h5>Bachelor of Nursing Science</h5>
-                                        <p>2019 / 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="experience">
-                                <div class="title">
-                                    <img src="work-icon.png" alt="work" class="qualification-icon">
-                                    <h3>Experience</h3>
-                                </div>
-                                <div class="experience-list">
-                                    <div class="developer">
-                                        <h4>Front-end Developer</h4>
-                                        <h5>Self-employed</h5>
-                                        <p>2024 / Present</p>
-                                    </div>
-                                    <div class="media">
-                                        <h4>Media Support Staff</h4>
-                                        <h5>Korean Culture and Information Service</h5>
-                                        <p>2023</p>
-                                    </div>
-                                    <div class="bachelor">
-                                        <h4>Psychiatric Nursing Internship </h4>
-                                        <h5>Diverse medical settings</h5>
-                                        <p>2020 / 2022</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="experience"></div>
+            <div class="textarea">
+                <div class="tablist">
+                    <button 
+                        type="button" 
+                        role="tab" 
+                        aria-selected={activeTab === "general"} 
+                        on:click={() => activeTab = "general"} 
+                        class:active={activeTab === "general"}
+                        style="background-color: {activeTab === 'general' ? '#EEDBD4' : 'transparent'}; color: {activeTab === 'general' ? 'white' : '#463F3C'};">
+                        General
+                    </button>
+                    <button 
+                        type="button" 
+                        role="tab" 
+                        aria-selected={activeTab === "qualification"} 
+                        on:click={() => activeTab = "qualification"} 
+                        class:active={activeTab === "qualification"}
+                        style="background-color: {activeTab === 'qualification' ? '#BBB2AF' : 'transparent'}; color: {activeTab === 'qualification' ? 'white' : '#463F3C'};">
+                        Qualification
+                    </button>
+                    <button 
+                        type="button" 
+                        role="tab" 
+                        aria-selected={activeTab === "skills"} 
+                        on:click={() => activeTab = "skills"} 
+                        class:active={activeTab === "skills"}
+                        style="background-color: {activeTab === 'skills' ? '#E5C3C2' : 'transparent'}; color: {activeTab === 'skills' ? 'white' : '#463F3C'};">
+                        Skills
+                    </button>
+                </div>
+            
+                <div class="textlist">
+                    {#if activeTab === "general"}
+                        <div data-state="active" class="active-general">
+                            <h2>A self-driven learner with a passion for growth</h2>
+                            <p>With a background in Nursing Science, I transitioned into tech after moving to the Netherlands for my relationship. I specialize in UX/UI design and front-end development, and I’m passionate about creating intuitive, user-centered digital experiences.</p>
                         </div>
-                    </div>
-                {:else if activeTab === "skills"}
-                    <div data-state="active" class="active-skills">
-                        <h2>Skills I provide to create real-life impact</h2>
-                        <div class="skill-list">
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3"/>
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/typescript.png" alt="typescript"/>
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/figma--v1.png" alt="figma--v1"/>
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="adobe-photoshop--v1"/>
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/visual-studio--v2.png" alt="visual-studio--v2"/>
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="git"/>
-                            <img width="48" height="48" src="https://img.icons8.com/ios-filled/50/github.png" alt="github"/>
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/docker.png" alt="docker"/>
-                            <img width="48" height="48" src="https://img.icons8.com/color/48/react-native.png" alt="react-native"/>
-                            <img width="48" height="48" src="svelte-icon.png" alt="svelte"/>
+                    {:else if activeTab === "qualification"}
+                        <div data-state="active" class="active-qualification">
+                            <h2>My journey is always accompanied by challenges</h2>
+                            <div class="qualification-list">
+                                <div class="education">
+                                    <div class="title">
+                                        <img src="education-icon.png" alt="education" class="qualification-icon">
+                                        <h3>Education</h3>
+                                    </div>
+                                    <div class="education-list">
+                                        <div class="hbo">
+                                            <h4>De Haagse Hogeschool</h4>
+                                            <h5>HBO Prophedeuse Bachelor of User Experience Design</h5>
+                                            <p>2023 / 2024</p>
+                                        </div>
+                                        <div class="bachelor">
+                                            <h4>Dong-Eui University</h4>
+                                            <h5>Bachelor of Nursing Science</h5>
+                                            <p>2019 / 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience">
+                                    <div class="title">
+                                        <img src="work-icon.png" alt="work" class="qualification-icon">
+                                        <h3>Experience</h3>
+                                    </div>
+                                    <div class="experience-list">
+                                        <div class="developer">
+                                            <h4>Front-end Developer</h4>
+                                            <h5>Self-employed</h5>
+                                            <p>2024 / Present</p>
+                                        </div>
+                                        <div class="media">
+                                            <h4>Media Support Staff</h4>
+                                            <h5>Korean Culture and Information Service</h5>
+                                            <p>2023</p>
+                                        </div>
+                                        <div class="bachelor">
+                                            <h4>Psychiatric Nursing Internship </h4>
+                                            <h5>Diverse medical settings</h5>
+                                            <p>2020 / 2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience"></div>
+                            </div>
                         </div>
-                    </div>
-                {/if}
+                    {:else if activeTab === "skills"}
+                        <div data-state="active" class="active-skills">
+                            <h2>Skills I provide to create real-life impact</h2>
+                            <div class="skill-list">
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3"/>
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/typescript.png" alt="typescript"/>
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/figma--v1.png" alt="figma--v1"/>
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="adobe-photoshop--v1"/>
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/visual-studio--v2.png" alt="visual-studio--v2"/>
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="git"/>
+                                <img width="48" height="48" src="https://img.icons8.com/ios-filled/50/github.png" alt="github"/>
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/docker.png" alt="docker"/>
+                                <img width="48" height="48" src="https://img.icons8.com/color/48/react-native.png" alt="react-native"/>
+                                <img width="48" height="48" src="svelte-icon.png" alt="svelte"/>
+                            </div>
+                        </div>
+                    {/if}
+                </div>
             </div>
         </div>
     </div>

@@ -5,34 +5,40 @@
 
 <main>
     <h1>My Projects</h1>
-    <div class="container">
-        <div class="work-list">
-            <div class="work-1 work-container">
-                <img src="prototype1.png" alt="portfolio prototype">
-                <div class="textarea">
-                    <h2>Portfoilo Website</h2>
-                    <p>The website you’re on right now.<br/>Built with Sveltekit. Deployed on Cloudflare.</p>
-                    <a href="/" class:active={get(page).url.pathname === '/'} class="contact-btn button"><span>Go to website</span></a>
+        <div class="container">
+            <div class="work-list">
+                <div data-aos="fade-up" data-aos-duration="1500">
+                    <div class="work-1 work-container">
+                        <img src="prototype1.png" alt="portfolio prototype">
+                        <div class="textarea">
+                            <h2>Portfoilo Website</h2>
+                            <p>The website you’re on right now.<br/>Built with Sveltekit. Deployed on Cloudflare.</p>
+                            <a href="/" class:active={get(page).url.pathname === '/'} class="contact-btn button"><span>Go to website</span></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="work-2 work-container">
-                <img src="prototype2.png" alt="wedding prototype">
-                <div class="textarea">
-                    <h2>Wedding Invitation Website</h2>
-                    <p>A website for inviting people to wedding ceremony.<br/>Built with Sveltekit. Deployed on Cloudflare.</p>
-                    <a href="https://yejeongandhakrim.pages.dev" class="contact-btn button"><span>Go to website</span></a>
+                <div data-aos="fade-up" data-aos-duration="1500">
+                    <div class="work-2 work-container">
+                        <img src="prototype2.png" alt="wedding prototype">
+                        <div class="textarea">
+                            <h2>Wedding Invitation Website</h2>
+                            <p>A website for inviting people to wedding ceremony.<br/>Built with Sveltekit. Deployed on Cloudflare.</p>
+                            <a href="https://yejeongandhakrim.pages.dev" class="contact-btn button"><span>Go to website</span></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="work-3 work-container">
-                <img src="prototype3.png" alt="esse prototype">
-                <div class="textarea">
-                    <h2>essebv.com</h2>
-                    <p>My very first project built with HTML, CSS, and Javascript.</p>
-                    <a href="https://www.essebv.com" class="contact-btn button"><span>Go to website</span></a>
+                <div data-aos="fade-up" data-aos-duration="1500">
+                    <div class="work-3 work-container">
+                        <img src="prototype3.png" alt="esse prototype">
+                        <div class="textarea">
+                            <h2>essebv.com</h2>
+                            <p>My very first project built with HTML, CSS, and Javascript.</p>
+                            <a href="https://www.essebv.com" class="contact-btn button"><span>Go to website</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </main>
 
 <style>
