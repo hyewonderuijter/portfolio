@@ -11,7 +11,10 @@
 
 <header>
     <div class="container">
-        <img src="/portfolio-logo.png" alt="logo of portfolio website" class="logo-img">
+        <button on:click={() => window.location.href = '/'}>
+            <img src="/portfolio-logo.png" alt="logo of portfolio website" class="logo-img">
+        </button>
+        
         <button 
             class="menu-overlay-bg {isMenuOpen ? 'visible' : ''}" 
             on:click={toggleMenu} 
@@ -60,6 +63,7 @@
     .logo-img {
         width: 5rem;
         border-radius: 10px;
+        cursor: pointer;
     }
 
     header {
@@ -111,6 +115,10 @@
         width: 100%;
     }
 
+    button {
+        border: 0;
+        background: transparent;
+    }
 /* Menu icon is Invisible if the screensize is big enough */
     .menu-icon, .overlay, .menu-overlay-bg {
         display: none;

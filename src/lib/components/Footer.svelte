@@ -5,9 +5,13 @@
 <style>
     main {
         text-align: center;
-        padding: 5rem 0;
-        color: #fff;
+        padding: 4rem 0;
+        color: #7d6f69;
         font-size: .7rem;
-        background-color: #000;
+        background-color: #F4EEEB;
+    }
+
+    p {
+        margin: 0;
     }
 </style>
