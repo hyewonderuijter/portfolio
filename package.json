@@ -35,5 +35,8 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"@lottiefiles/dotlottie-svelte": "^0.4.8"
 	}
 }
