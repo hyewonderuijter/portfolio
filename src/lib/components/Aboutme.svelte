@@ -1,14 +1,12 @@
 <script>
-    let activeTab = "general"; // 기본적으로 "general" 탭이 활성화됨
+    let activeTab = "general";
 </script>
 
 <main>
     <h1>Who am I?</h1>
     <div class="container">
-        <div class="imgarea">
+        <div class="imgarea left">
             <img src="aboutme.png" alt="profile in the about page" class="about-profile">
-            
-            <!-- SVG 색상 변경 -->
             <svg class="blob-shape" xmlns="http://www.w3.org/2000/svg" width="599" height="540" viewBox="0 0 599 540" fill="none">
                 <path 
                     d="M589 246.5C547.464 432 468.788 540 320.5 540C172.212 540 0 377.275 0 208C0 38.7247 172.212 0 320.5 0C468.788 0 640.5 16.5 589 246.5Z" 
@@ -16,7 +14,7 @@
                 />
             </svg>
         </div>
-        <div class="textarea">
+        <div class="textarea right">
             <div class="tablist">
                 <button 
                     type="button" 
@@ -51,10 +49,18 @@
                 {#if activeTab === "general"}
                     <div data-state="active" class="active-general">
                         <h2>A self-driven learner with a passion for growth</h2>
+                        <p>With a background in Nursing Science, I transitioned into tech after moving to the Netherlands for my relationship. I specialize in UX/UI design and front-end development, and I’m passionate about creating intuitive, user-centered digital experiences. I am continuously learning new technologies to enhance my skills and am currently focused on mastering modern front-end frameworks, as well as 3D web development tools like Three.js and React Fiber."</p>
+                        <div class="general-info">
+
+                        </div>
                     </div>
                 {:else if activeTab === "qualification"}
                     <div data-state="active" class="active-qualification">
                         <h2>My journey is always accompanied by challenges</h2>
+                        <div class="qualification-list">
+                            <div class="education"></div>
+                            <div class="experience"></div>
+                        </div>
                     </div>
                 {:else if activeTab === "skills"}
                     <div data-state="active" class="active-skills">
@@ -78,12 +84,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 0 auto;
     }
-    
-    .textarea {
-        min-width: 536px;
-        margin: 0 auto;
+
+    .right {
+        margin: 0 auto; /* Ensure the fixed width of nav bar*/
     }
 
     .imgarea {
@@ -93,7 +97,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-right: 3rem; /* Margin between left and right container */
     }
+    
 
     .about-profile {
         width: 30vw;
@@ -114,51 +120,79 @@
         z-index: 1;
     }
 
+    .tablist {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: 1px solid #463F3C;
+        border-radius: 50px;
+        padding: 0.25rem;
+        width: 100%;
+        max-width: 600px; /* Ensure the tab list has a fixed width */
+        margin: 2rem auto;
+        text-align: center;
+    }
+
     .tablist > button {
         border: none;
         background-color: transparent;
-        width: 170px;
-        margin: 0 auto;
-        padding: 1.5rem 0;
-        transition: background-color 0.5s ease;
+        padding: 1rem; /* Consistent padding for each button */
+        transition: background-color 0.3s ease, color 0.3s ease;
+        flex-grow: 1; /* Ensure buttons grow equally */
+        cursor: pointer;
+        text-align: center;
     }
 
-    .tablist {
-        border: 1px solid #463F3C;
-        border-radius: 50px;
-        padding: .25rem .5rem;
+    /* Ensure all buttons are equally sized */
+    .tablist button {
+        width: 100%; /* Make sure each button fills its container */
+        min-width: 200px; /* Ensure minimum size of each button!! */
     }
 
-    /* 탭 버튼 활성화 시 색상 변경 */
+    /* Tab button active state */
     .tablist button.active {
+        background-color: #EEDBD4; /* Active tab background color */
+        color: white; /* Active tab text color */
         border-radius: 50px;
     }
 
-    /* 탭 버튼 hover 시 색상 변경 */
+    /* Hover state */
     .tablist button:hover {
-        background-color: transparent; /* Default fallback */
+        background-color: #F0E0C9; /* Hover background color */
+        color: white;
     }
 
+    .active-general, .active-qualification {
+        max-width: 700px;
+        margin: 3rem 0;
+    }
 
+    /* Font styling for h2 */
     h1 {
         margin-top: 0;
     }
 
     h2 {
-
         font-weight: 500;
+        font-size: 1.7rem;
         text-align: center;
-
     }
 
     button {
-        font-size: 1.3rem;
-        text-align: center;
+        font-size: 1.1rem;
+
     }
 
+    p {
+        font-size: 1.1rem;
+        line-height: 2;
+    }
+    /* Mobile responsive styles */
     @media (max-width: 994px) {
         .tablist, .imgarea {
             display: none;
         }
     }
+
 </style>
