@@ -9,7 +9,7 @@
             <div class="work-list">
                 <div data-aos="fade-up" data-aos-duration="1500">
                     <div class="work-1 work-container">
-                        <img src="https://www.hyewonim.com/static/prototype1.png" alt="portfolio prototype">
+                        <img src="https://pub-6e499fd5de234ef3aba9fca203ce8d62.r2.dev/static/prototype1.png" alt="portfolio prototype">
                         <div class="textarea">
                             <h2>Portfoilo Website</h2>
                             <p>The website you’re on right now.<br/>Built with Sveltekit. Deployed on Cloudflare.</p>
@@ -18,7 +18,7 @@
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1500">
                     <div class="work-2 work-container">
-                        <img src="https://www.hyewonim.com/static/prototype2.png" alt="wedding prototype">
+                        <img src="https://pub-6e499fd5de234ef3aba9fca203ce8d62.r2.dev/static/prototype2.png" alt="wedding prototype">
                         <div class="textarea">
                             <h2>Wedding Invitation Website</h2>
                             <p>A website for inviting people to wedding ceremony.<br/>Built with Sveltekit. Deployed on Cloudflare.</p>
@@ -28,7 +28,7 @@
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1500">
                     <div class="work-3 work-container">
-                        <img src="https://www.hyewonim.com/static/prototype3.png" alt="esse prototype">
+                        <img src="https://pub-6e499fd5de234ef3aba9fca203ce8d62.r2.dev/static/prototype3.png" alt="esse prototype">
                         <div class="textarea">
                             <h2>essebv.com</h2>
                             <p>My very first project built with HTML, CSS, and Javascript.</p>

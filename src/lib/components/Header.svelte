@@ -12,7 +12,7 @@
 <header>
     <div class="container">
         <button on:click={() => window.location.href = '/'}>
-            <img src="https://www.hyewonim.com/static/portfolio-logo.png" alt="logo of portfolio website" class="logo-img">
+            <img src="https://pub-6e499fd5de234ef3aba9fca203ce8d62.r2.dev/static/portfolio-logo.png" alt="logo of portfolio website" class="logo-img">
         </button>
         
         <button 

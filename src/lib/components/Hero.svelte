@@ -20,13 +20,13 @@
                 <h2>I am a Junior Front-End Developer based in the Netherlands. My passion lies in experimenting with technology and exploring 3D web development.</h2>
                 <div class="buttons">
                     <a href="/contact" class:active={$page.url.pathname === '/contact'} class="contact-btn button"><span>Contact </span></a>
-                    <a href="https://www.hyewonim.com/CV%20-%20Hyewon%20IM.pdf" class="cv-btn button"><span>Download CV </span></a>
+                    <a href="https://pub-6e499fd5de234ef3aba9fca203ce8d62.r2.dev/CV%20-%20Hyewon%20IM.pdf" class="cv-btn button"><span>Download CV </span></a>
                 </div>
             </div>
         </div>
         <div class="imgarea right">
             <div data-aos="fade-left" data-aos-duration="1300">
-                <img src="https://www.hyewonim.com/static/laptop-nobg.png" alt="main in the hero page" class="main-profile">
+                <img src="https://pub-6e499fd5de234ef3aba9fca203ce8d62.r2.dev/static/laptop-nobg.png" alt="main in the hero page" class="main-profile">
                 <svg class="svg-shape first" xmlns="http://www.w3.org/2000/svg" width="388" height="573" viewBox="0 0 388 573" fill="none">
                 <path d="M387.586 255.689C387.586 396.902 408.113 709.1 159.985 506.614C193.793 277.923 0 396.902 0 255.689C0 114.476 86.7642 0 193.793 0C300.822 0 387.586 114.476 387.586 255.689Z" fill="#ADA29E"/>
               </svg>
@@ -42,7 +42,7 @@
     main {
         width: 100vw;
         height: 70vh;
-        background: url('https://www.hyewonim.com/static/bg.svg') no-repeat top / cover;
+        background: url('https://pub-6e499fd5de234ef3aba9fca203ce8d62.r2.dev/static/bg.svg') no-repeat top / cover;
         background-repeat: no-repeat;
         padding: 2rem 0;
         overflow-y: hidden;
