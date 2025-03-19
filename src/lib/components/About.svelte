@@ -7,7 +7,7 @@
     <div data-aos="fade-up" data-aos-duration="1300">
         <div class="container">
             <div class="imgarea">
-                <img src="aboutme.png" alt="profile in the about page" class="about-profile">
+                <img src="https://www.hyewonim.com/static/aboutme.png" alt="profile in the about page" class="about-profile">
                 <svg class="blob-shape" xmlns="http://www.w3.org/2000/svg" width="599" height="540" viewBox="0 0 599 540" fill="none">
                     <path 
                         d="M589 246.5C547.464 432 468.788 540 320.5 540C172.212 540 0 377.275 0 208C0 38.7247 172.212 0 320.5 0C468.788 0 640.5 16.5 589 246.5Z" 
@@ -58,7 +58,7 @@
                             <div class="qualification-list">
                                 <div class="education">
                                     <div class="title">
-                                        <img src="education-icon.png" alt="education" class="qualification-icon">
+                                        <img src="https://www.hyewonim.com/static/education-icon.png" alt="education" class="qualification-icon">
                                         <h3>Education</h3>
                                     </div>
                                     <div class="education-list">
@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="experience">
                                     <div class="title">
-                                        <img src="work-icon.png" alt="work" class="qualification-icon">
+                                        <img src="https://www.hyewonim.com/static/work-icon.png" alt="work" class="qualification-icon">
                                         <h3>Experience</h3>
                                     </div>
                                     <div class="experience-list">
@@ -115,7 +115,7 @@
                                 <img width="48" height="48" src="https://img.icons8.com/ios-filled/50/github.png" alt="github"/>
                                 <img width="48" height="48" src="https://img.icons8.com/color/48/docker.png" alt="docker"/>
                                 <img width="48" height="48" src="https://img.icons8.com/color/48/react-native.png" alt="react-native"/>
-                                <img width="48" height="48" src="svelte-icon.png" alt="svelte"/>
+                                <img width="48" height="48" src="https://www.hyewonim.com/static/svelte-icon.png" alt="svelte"/>
                             </div>
                         </div>
                     {/if}

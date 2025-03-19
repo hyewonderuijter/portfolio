@@ -6,7 +6,7 @@
     <div class="container">
         <div class="textarea">
             <h1>Let's Work <br/><span>Together</span></h1>
-            <p>I’m always open for a conversation—whether it’s for a potential project, seeking advice, asking questions, or simply networking. My inbox is always open!</p>
+            <p>I’m always open for a conversation—whether it’s about a potential project, seeking advice, asking questions, or simply networking. Feel free to contact me by clicking one of the icons below!</p>
             
             <!-- Contact Icons -->
             <div class="icon-container">
@@ -76,7 +76,7 @@
         background-color: #BEB096;
         padding: .25rem 1rem;
         border-radius: 5px;    
-        color: #EAE2DE;
+        color: #000;
     }
 
     /* Contact Icons */

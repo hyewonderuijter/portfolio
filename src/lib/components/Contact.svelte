@@ -24,7 +24,7 @@
 <style>
 
 main {
-    background: url('./footer-bg.svg') no-repeat bottom / cover;
+    background: url('https://www.hyewonim.com/static/footer-bg.svg') no-repeat bottom / cover;
     height: 40vh;
     display: flex;
     align-items: flex-end; /* Align children at the bottom */
