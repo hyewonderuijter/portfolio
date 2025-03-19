@@ -113,6 +113,7 @@
     a:focus::after,
     a.active::after {
         width: 100%;
+        cursor: pointer;
     }
 
     button {
@@ -168,7 +169,6 @@
                     display: block;
                     width: 30px;
                     border-bottom: none;
-                    
                 }
 
                 .menu-close-icon {
@@ -180,25 +180,6 @@
                 }
 
                 /* Menu - Overlay Effect */
-
-                .menu-overlay-bg {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    background: rgba(0, 0, 0, 0.5);
-                    backdrop-filter: blur(10px); /* Blur Effect */
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-                    z-index: 998;
-                }
-
-                .menu-overlay-bg.visible {
-                    opacity: 1;
-                    visibility: visible;
-                }
 
                 .overlay {
                     position: fixed;

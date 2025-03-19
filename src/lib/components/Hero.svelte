@@ -13,7 +13,8 @@
 <main>
     <div class="spacer layer1 container">
         <div class="textarea left">
-            <div data-aos="fade-right" data-aos-duration="1300">
+            <div data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom" data-aos-duration="1300">
                 <p>Junior Front-End Developer</p>
                 <h1>Hello, I'm Hyewon</h1>
                 <h2>A junior Front-End Developer from South Korea, currently based in the Netherlands.
@@ -31,7 +32,7 @@
                 <path d="M387.586 255.689C387.586 396.902 408.113 709.1 159.985 506.614C193.793 277.923 0 396.902 0 255.689C0 114.476 86.7642 0 193.793 0C300.822 0 387.586 114.476 387.586 255.689Z" fill="#ADA29E"/>
               </svg>
               <svg class="svg-shape second" xmlns="http://www.w3.org/2000/svg" width="386" height="620" viewBox="0 0 386 620" fill="none">
-                <path d="M376.401 310.301C343.705 456.319 291.17 783.564 99.3069 520.728C184.787 291.539 -29.227 372.814 3.46893 226.795C36.1649 80.7768 146.154 -18.9013 249.136 4.15811C352.118 27.2175 409.097 164.282 376.401 310.301Z" fill="#D2B1A4"/>
+                <path d="M376.401 310.301C343.705 456.319 291.17 783.564 99.3069 520.728C184.787 291.539 -29.227 372.814 3.46893 226.795C36.1649 80.7768 146.154 -18.9013 249.136 4.15811C352.118 27.2175 409.097 164.282 376.401 310.301Z" fill="#EBE2DE"/>
               </svg>
             </div>
         </div>
@@ -182,6 +183,17 @@
     /*       Media Query        */
     /* ======================== */
     /* ======================== */
+ 
+    @media (min-width: 1335px) {
+        main {
+            height: 100vh;
+        }
+
+        .container {
+            margin-top: 4rem;
+        }
+    }
+
 
     @media (max-width: 684px) {
         main {

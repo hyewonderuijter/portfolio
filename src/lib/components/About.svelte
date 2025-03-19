@@ -169,7 +169,7 @@
     /* Blob Shape */
     .blob-shape {
         position: absolute;
-        width: 36vw;
+        max-width: 36vw;
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -352,10 +352,44 @@
 /*       Media Query        */
 /* ======================== */
 /* ======================== */
+    @media (min-width: 1740px) {
+        h1 {
+            margin-top: 2rem;
+        }   
+
+        .container {
+            max-width: 70%;
+            margin-top: 5rem;
+        }
+        .imgarea {
+            max-width: 600px;
+            max-height: 600px;
+            
+        }
+        /* Ensure the image size stays smaller than or equal to the blob size */
+        .about-profile {
+            max-width: 448px; /* Adjust this to be slightly smaller than the blob */
+            top: 48%;
+        }
+
+        .blob-shape {
+            max-width: 538px;
+            width: 36vw; /* Ensuring the blob stays the same */
+        }
+
+    }
+    
+    @media (min-width: 1225px ) and (max-width: 1739px){
+        .container {
+            margin-top: 6rem;
+        }
+    }
+
     @media (min-width: 995px ) and (max-width: 1224px){
 
         .container {
             min-width: 100vw;
+            margin-top: 4rem;
         }
 
         .imgarea {
