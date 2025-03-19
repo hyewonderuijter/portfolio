@@ -13,7 +13,6 @@
                         <div class="textarea">
                             <h2>Portfoilo Website</h2>
                             <p>The website you’re on right now.<br/>Built with Sveltekit. Deployed on Cloudflare.</p>
-                            <a href="/" class:active={get(page).url.pathname === '/'} class="contact-btn button"><span>Go to website</span></a>
                         </div>
                     </div>
                 </div>
