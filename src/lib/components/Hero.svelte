@@ -271,7 +271,7 @@
         }
 
         p {
-            margin-top: 2rem;
+            margin-top: 1rem;
             font-size: .7rem;
             letter-spacing: .2em;
         }
