@@ -144,6 +144,26 @@ p {
 /* ======================== */
 /*       Media Query        */
 /* ======================== */
+@media (min-width: 1174px) {
+    .work-list {
+        margin: 0 auto;
+    }
+    img {
+        max-width: 800px; /* Scale the image width */
+    }
+
+    h2, p, a {
+        margin: 1rem 0;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+}
 @media (max-width: 768px) {
     .container {
         flex-direction: column; /* Stack content vertically on smaller screens */

@@ -354,7 +354,7 @@
 /* ======================== */
     @media (min-width: 1740px) {
         h1 {
-            margin-top: 2rem;
+            margin-top: 5rem;
         }   
 
         .container {

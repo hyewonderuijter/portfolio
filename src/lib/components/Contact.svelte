@@ -10,7 +10,14 @@
             <h1>Let's connect!</h1>
             <p>Ready to bring innovative ideas to life.</p>
         </div>
-        <a href="/contact" class:active={get(page).url.pathname === '/contact'} class="contact-btn button"><span>Contact</span></a>
+        <div class="contact-list">
+            <a href="/contact" class:active={get(page).url.pathname === '/contact'} class="contact-btn button"><span>Contact</span></a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/hyewonim"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/linkedin.png" alt="linkedin" class="social-icon-img icon"/></a>
+                <a href="https://github.com/hyewonderuijter"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" class="social-icon-img icon"/></a>
+                <a href="https://www.instagram.com/uomahy__/"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/instagram-new.png" alt="instagram-new" class="social-icon-img icon"/></a>
+            </div>
+        </div>
     </div>
 </main>
 
@@ -92,36 +99,97 @@ h1 {
 
 p {
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 h1, p {
     margin-right: 2rem;
 }
+
+.social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 20%;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+
 /* ======================== */
 /*       Media Query        */
 /* ======================== */
+@media (min-width: 1170px) {
+    main {
+        align-items: center;
+    }
+
+    .container {
+        max-width: 65vw;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    p {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 20%;
+        margin: 0 auto;
+        margin-top: 1rem;
+        gap: 2rem;
+    }
+
+    .contact-list {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1170px) and ((max-width: 1470px)) {
+    .social-icons {
+        display: none;
+    }
+}
+
 @media (max-width: 686px) {
     main {
-    align-items: flex-end; /* Align children at the bottom */
-}
+        align-items: flex-end; /* Align children at the bottom */
+    }
     .container {
-        width: 80vw;
-        margin: 0 auto;
-}
+            width: 80vw;
+            margin: 0 auto;
+    }
 
-h1 {
-    font-size: 1.5rem;
-}
+    h1 {
+        font-size: 1.5rem;
+    }
 
-p {
-    font-size: .8rem;
-}
+    p {
+        font-size: .8rem;
+    }
+
     /* Button */
     .button {
         padding: .75rem .6rem;
         font-size: .8rem;
     }
-}
+
+    .social-icons {
+        display: none;
+    }
+    
+    }
 
 </style>

@@ -4,7 +4,6 @@
 
 <main>
     <div class="container">
-        
         <div class="textarea">
             <h1>Let's Work <br/><span>Together</span></h1>
             <p>I’m always open for a conversation—whether it’s for a potential project, seeking advice, asking questions, or simply networking. My inbox is always open!</p>
@@ -40,7 +39,6 @@
 
 <style>
     main {
-        width: 100vw;
         height: 75vh;
     }
 
@@ -49,14 +47,12 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        max-width: 80vw;
+        width: 80vw;
         margin: 0 auto;
     }
 
     .textarea {
-        margin: 0 auto;
         text-align: left;
-        max-width: 70vw;
     }
 
     .blob {
@@ -70,9 +66,9 @@
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 200;
-        max-width: 350px;
+        max-width: 400px;
         line-height: 1.7;
     }
 
@@ -80,7 +76,7 @@
         background-color: #BEB096;
         padding: .25rem 1rem;
         border-radius: 5px;    
-        color: #fff;
+        color: #EAE2DE;
     }
 
     /* Contact Icons */
@@ -121,49 +117,66 @@
     }
 
     /* Media Query for Small Screens */
+    @media (min-width: 1200px){
+        .container {
+            max-width: 900px;
+            margin-top: 3rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+            font-weight: 200;
+            max-width: 450px;
+        }
+    }
+
     @media (max-width: 768px) {
-    .container {
-        align-items: center;
-        flex-direction: column; /* Stack content vertically on smaller screens */
-        text-align: center; /* Center-align text */
-        justify-content: center; /* Vertically center the content */
-        height: 70vh; /* Full viewport height */
-    }
-    .icon-container{
-        gap: 0;
-        justify-content: space-between;
-    }
+        .container {
+            align-items: center;
+            flex-direction: column; /* Stack content vertically on smaller screens */
+            text-align: center; /* Center-align text */
+            justify-content: center; /* Vertically center the content */
+            height: 70vh; /* Full viewport height */
+        }
+        .icon-container{
+            gap: 0;
+            justify-content: space-between;
+        }
 
-    .icon {
-        margin: 0 auto;
-    }
+        .icon {
+            margin: 0 auto;
+        }
 
-    img {
-        width: 24px;
-        height: 24px;
-    }
+        img {
+            width: 24px;
+            height: 24px;
+        }
 
-    .icon {
-        width: 40px;
-        height: 40px;
-    }
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
 
-    .textarea {
-        text-align: center;
-    }
+        .textarea {
+            text-align: center;
+        }
 
-    .blob {
-        display: none; /* Hide blob */
-    }
+        .blob {
+            display: none; /* Hide blob */
+        }
 
-    h1 {
-        font-size: 2.5rem;
-    }
+        h1 {
+            font-size: 2.5rem;
+        }
 
-    p {
-        font-size: .8rem;
-        margin-bottom: 2rem;
+        p {
+            font-size: .8rem;
+            margin-bottom: 2rem;
+        }
     }
-}
 
 </style>

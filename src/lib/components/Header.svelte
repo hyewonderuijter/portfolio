@@ -120,10 +120,10 @@
         border: 0;
         background: transparent;
     }
-/* Menu icon is Invisible if the screensize is big enough */
-    .menu-icon, .overlay, .menu-overlay-bg {
-        display: none;
-    }
+        /* Menu icon is Invisible if the screensize is big enough */
+            .menu-icon, .overlay {
+                display: none;
+            }
 
     /* ======================== */
     /* ======================== */
@@ -180,7 +180,20 @@
                 }
 
                 /* Menu - Overlay Effect */
-
+                .menu-overlay-bg {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+                    z-index: 998; /* Ensure it's on top of the background but below the menu */
+                    opacity: 0; /* Initially hidden */
+                    visibility: hidden; /* Initially hidden */
+                    transition: opacity 0.3s ease, visibility 0.3s ease;
+                    backdrop-filter: blur(10px); /* Apply blur effect to the background */
+                }
+                
                 .overlay {
                     position: fixed;
                     top: 0;
@@ -218,6 +231,11 @@
                 .overlay.open a {
                     opacity: 1;  /* Make menu items visible */
                     transform: translateX(0);  /* Move items to their normal position */
+                }
+
+                .menu-overlay-bg.visible {
+                    opacity: 1;
+                    visibility: visible;
                 }
 
                 a:hover::after,

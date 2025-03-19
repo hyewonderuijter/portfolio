@@ -17,11 +17,10 @@
             data-aos-anchor-placement="top-bottom" data-aos-duration="1300">
                 <p>Junior Front-End Developer</p>
                 <h1>Hello, I'm Hyewon</h1>
-                <h2>A junior Front-End Developer from South Korea, currently based in the Netherlands.
-                    My interest lies in experimenting with technology and 3D-web development.</h2>
+                <h2>I am a Junior Front-End Developer from South Korea, currently based in the Netherlands. My passion lies in experimenting with technology and exploring 3D web development.</h2>
                 <div class="buttons">
                     <a href="/contact" class:active={$page.url.pathname === '/contact'} class="contact-btn button"><span>Contact </span></a>
-                    <a href="https://www.icloud.com/iclouddrive/0d1k1pfQKl1VG0TuXZjEt7E9w#CV_-_Hyewon_IM" class="cv-btn button"><span>Download CV </span></a>
+                    <a href="https://www.hyewonim.com/CV%20-%20Hyewon%20IM.pdf" class="cv-btn button"><span>Download CV </span></a>
                 </div>
             </div>
         </div>
@@ -183,8 +182,44 @@
     /*       Media Query        */
     /* ======================== */
     /* ======================== */
- 
-    @media (min-width: 1335px) {
+    @media (min-width: 1498px) {
+        main {
+            height: 100vh;
+        }
+        .container {
+            margin-top: 7rem;
+            max-width: 80vw;
+        }
+
+        .textarea {
+            max-width: 100vw;
+            margin-top: 0;
+        }
+        
+        .main-profile {
+            width: 300px;
+            top: -100px;
+        }
+        
+        h1 {
+            font-size: 5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            line-height: 2;
+            max-width: 700px;
+        }
+
+        p {
+            margin-top: 0;
+            font-size: 1.1rem;
+            letter-spacing: .2em;
+            text-align: left;
+        }
+    }
+
+    @media (min-width: 1335px) and (max-width: 1497px) {
         main {
             height: 100vh;
         }
@@ -197,69 +232,48 @@
 
     @media (max-width: 684px) {
         main {
-            min-height: 80vh;
-        }
-
-    .textarea {
-        max-width: 80vw;
-        text-align: center;
-        margin: 0 auto;
-        gap: 30px;
-    }
-
-    .right {
-        display: none;
-    }
-
-    .buttons {
-        margin: 0 auto;
-    }
-
-    /* Font */
-    h1 {
-        font-size: 3.5rem;
-    }
-
-    h2 {
-        max-width: 70vw;
-        font-size: 1.5rem;
-        margin: 0 auto;
-    }
-
-    p {
-        margin-top: 5rem;
-    }
-
-    }
-
-    @media (max-width: 480px) {
-        main {
             min-height: 90vh;
         }
 
         .textarea {
+            max-width: 80vw;
+            text-align: center;
+            margin: 0 auto;
             gap: 30px;
         }
 
-        h2 {
-            font-size: 1rem;
+        .right {
+            display: none;
         }
 
-        p {
-            margin-top: 4rem;
-            font-size: .7rem;
-            letter-spacing: .25em;
-        }
-        
         .buttons {
             flex-direction: column;
             margin: 0 auto;
+            margin-top: 4rem;
+            gap: 2rem;
         }
+
         .button {
             font-size: 1rem;
             padding: 1rem 1.5rem;
             width: 150px;
             margin: 0 auto;
+        }
+
+        /* Font */
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        p {
+            margin-top: 5rem;
+            font-size: .7rem;
+            letter-spacing: .2em;
+        }
     }
-}
 </style>
