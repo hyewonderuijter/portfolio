@@ -28,9 +28,9 @@
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         >
             {#if isMenuOpen}
-            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/delete-sign.png" alt="delete-sign" class="menu-close-icon">
+            <img width="30" height="30" src="https://img.icons8.com/ios/50/delete-sign--v1.png" alt="delete-sign" class="menu-close-icon">
             {:else}
-            <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/menu--v1.png" alt="menu--v3"class="menu-open-icon">
+            <img width="30" height="30" src="https://img.icons8.com/ios/50/menu--v7.png" alt="menu--v3"class="menu-open-icon">
             {/if}
         </button>
 
