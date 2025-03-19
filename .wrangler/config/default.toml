@@ -1,5 +1,5 @@
-name = "blog"
-compatibility_date = "2025-03-16"
+name = "portfolio"
+compatibility_date = "2025-03-19"
 
 [site]
 bucket = "./build"
