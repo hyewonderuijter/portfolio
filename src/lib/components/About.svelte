@@ -50,7 +50,7 @@
                     {#if activeTab === "general"}
                         <div data-state="active" class="active-general">
                             <h2>A self-driven learner with a passion for growth</h2>
-                            <p>With a background in Nursing Science, I transitioned into tech after moving to the Netherlands for my relationship. I specialize in UX/UI design and front-end development, and I’m passionate about creating intuitive, user-centered digital experiences.</p>
+                            <p>With a background in Nursing Science, I transitioned into tech after moving to the Netherlands for my relationship. I specialize in UX/UI design and Web development, and I’m passionate about creating intuitive, user-centered digital experiences.</p>
                         </div>
                     {:else if activeTab === "qualification"}
                         <div data-state="active" class="active-qualification">

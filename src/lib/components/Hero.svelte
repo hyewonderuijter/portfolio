@@ -15,12 +15,12 @@
         <div class="textarea left">
             <div data-aos="fade-up"
             data-aos-anchor-placement="top-bottom" data-aos-duration="1300">
-                <p>Junior Front-End Developer</p>
+                <p>Junior Web Developer</p>
                 <h1>Hello, I'm Hyewon</h1>
-                <h2>I am a Junior Front-End Developer based in the Netherlands. My passion lies in experimenting with technology and exploring 3D web development.</h2>
+                <h2>I am a Junior Web Developer based in the Netherlands. My passion lies in experimenting with technology and exploring 3D web development.</h2>
                 <div class="buttons">
                     <a href="/contact" class:active={$page.url.pathname === '/contact'} class="contact-btn button"><span>Contact </span></a>
-                    <a href="https://pub-6e499fd5de234ef3aba9fca203ce8d62.r2.dev/CV%20-%20Hyewon%20IM.pdf" class="cv-btn button"><span>Download CV </span></a>
+                    <a href="https://pub-6e499fd5de234ef3aba9fca203ce8d62.r2.dev/CV%20-%20Hyewon%20Im.pdf" class="cv-btn button"><span>Download CV </span></a>
                 </div>
             </div>
         </div>
